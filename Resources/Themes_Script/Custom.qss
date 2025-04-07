@@ -1,0 +1,7 @@
+QToolBar {
+    padding: 5px;
+}
+
+QToolBar QToolButton {
+    font-size: 24px;
+}

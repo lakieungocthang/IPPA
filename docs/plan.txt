@@ -1,0 +1,26 @@
+1. Create base function (done)
+    1.1. Image (done)
+        - Display images (done)
+        - Zoom, scroll (done)
+    1.2. Files mngt (done)
+        - Load files (done)
+        - Save files (done)
+    1.3. App (done)
+        - Load data (done) 
+        - Functions trigger (done)
+        - Tree trigger (done)
+2. Update GUI
+    2.1. App
+        - Detail of base functions: edit, transform
+    2.2. Image
+        - Transform: Crop, resize, rotation/flip(optional) (done)
+        - Edit: Draw, erase(mask) (done)
+3. Extend functions
+    4.1. Apply for all
+4. AI functions
+    3.1. Classify (done)
+    3.2. Detect
+    3.3. Pre-config windows
+5. AI for video (done)
+6. Dicom save type
+7. Report function

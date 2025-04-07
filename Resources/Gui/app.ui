@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1291</width>
+    <height>1061</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font-size: 20px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="display3d">
+       <layout class="QVBoxLayout" name="image3dLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="displayGraphic">
+       <layout class="QVBoxLayout" name="imageGraphicLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar_1">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen_Folder"/>
+   <addaction name="separator"/>
+   <addaction name="actionReset"/>
+   <addaction name="actionTransform"/>
+   <addaction name="actionEdit"/>
+  </widget>
+  <widget class="QDockWidget" name="dockReportHeader">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Select Hospital</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockReportHeaderWidgetContents">
+    <layout class="QVBoxLayout" name="LayoutReportHeader"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockReportHeader2">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Sort By</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockReportHeader2WidgetContents">
+    <layout class="QVBoxLayout" name="LayoutReportHeader2"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockHierarchyReport">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Hierarchy</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <layout class="QVBoxLayout" name="LayoutHierarchyReport">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTreeView" name="treeViewReport">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockHierarchy">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Hierarchy</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <layout class="QVBoxLayout" name="LayoutHierarchy">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTreeView" name="treeView">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockProperties">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>58</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="LayoutProperties">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelProperties">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockTransform">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Transform</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QVBoxLayout" name="LayoutTransform"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockEdit">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Edit</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <layout class="QVBoxLayout" name="LayoutEdit"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockReport">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Report</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_5">
+    <layout class="QVBoxLayout" name="LayoutReport"/>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionReport"/>
+   <addaction name="separator"/>
+   <addaction name="actionExport"/>
+  </widget>
+  <widget class="QDockWidget" name="dockReportMain">
+   <property name="windowTitle">
+    <string>Report Image</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_8">
+    <layout class="QVBoxLayout" name="LayoutReportMain"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockClassify">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Classify</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_6">
+    <layout class="QVBoxLayout" name="LayoutClassify"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockDetector">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>Detector</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_7">
+    <layout class="QVBoxLayout" name="LayoutDetector"/>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionClassify"/>
+   <addaction name="actionDetector"/>
+   <addaction name="actionTracking"/>
+   <addaction name="actionGenerate"/>
+   <addaction name="actionReconstruct"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_4">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::RightToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dockGenerator">
+   <property name="windowTitle">
+    <string>Generator</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_8">
+    <layout class="QVBoxLayout" name="LayoutGenerator"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockTracker">
+   <property name="windowTitle">
+    <string>Tracker</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_9">
+    <layout class="QVBoxLayout" name="LayoutTracker"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockReconstructor">
+   <property name="windowTitle">
+    <string>Reconstructor</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_10">
+    <layout class="QVBoxLayout" name="LayoutReconstructor"/>
+   </widget>
+  </widget>
+  <action name="actionOpen_Folder">
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/folder.svg</normaloff>:/Icons/Resources/Icons/folder.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/refresh.svg</normaloff>:/Icons/Resources/Icons/refresh.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionClassify">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/layers.svg</normaloff>:/Icons/Resources/Icons/layers.svg</iconset>
+   </property>
+   <property name="text">
+    <string>LandMark</string>
+   </property>
+  </action>
+  <action name="actionTransform">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/contrast.svg</normaloff>:/Icons/Resources/Icons/contrast.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Transform</string>
+   </property>
+   <property name="toolTip">
+    <string>Transform</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/edit.svg</normaloff>:/Icons/Resources/Icons/edit.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Edit</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/save.svg</normaloff>:/Icons/Resources/Icons/save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/download.svg</normaloff>:/Icons/Resources/Icons/download.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Dicom</string>
+   </property>
+   <property name="toolTip">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/feed.svg</normaloff>:/Icons/Resources/Icons/feed.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Report</string>
+   </property>
+   <property name="toolTip">
+    <string>Report</string>
+   </property>
+  </action>
+  <action name="actionDetector">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/Icons/maximise.svg</normaloff>:/Icons/Resources/Icons/maximise.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Abnormal</string>
+   </property>
+   <property name="toolTip">
+    <string>Detector</string>
+   </property>
+  </action>
+  <action name="actionTracking">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/NewIcons/Tracking.svg</normaloff>:/Icons/Resources/NewIcons/Tracking.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Tracking</string>
+   </property>
+   <property name="toolTip">
+    <string>Tracking</string>
+   </property>
+  </action>
+  <action name="actionGenerate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/NewIcons/Generative.svg</normaloff>:/Icons/Resources/NewIcons/Generative.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Generate</string>
+   </property>
+   <property name="toolTip">
+    <string>Generate</string>
+   </property>
+  </action>
+  <action name="actionReconstruct">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Icons/Resources/NewIcons/Reconstruction.svg</normaloff>:/Icons/Resources/NewIcons/Reconstruction.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Reconstruct</string>
+   </property>
+   <property name="toolTip">
+    <string>Reconstruct</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

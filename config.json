@@ -1,0 +1,26 @@
+{
+    "report":{
+        "hospitals":[
+            {
+                "name":"Phong Kham HL",
+                "code":"hl",
+                "folder":"./logs/13VideoLogs"
+            },
+            {
+                "name":"Benh Vien DH Y",
+                "code":"dhy",
+                "folder":"C:\\Users\\HVN\\Desktop\\noisoi\\logs"
+            },
+            {
+                "name":"BV Dai Hoc Y Te Ky thuat HD",
+                "code":"hd",
+                "folder":"C:\\Users\\HVN\\Desktop\\noisoi\\logs"
+            }
+        ],
+        "outDir": "reports",
+        "minConfidence": 0.01,
+        "numImages":8,
+        "similarityThreshold": 0.3,
+        "docTemplate":"maubaocao4.docx"
+    }
+}

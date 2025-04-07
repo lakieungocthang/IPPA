@@ -1,0 +1,10 @@
+
+
+
+
+
+
+
+
+9. image not change after change display area size
+10. button will disable when close dockwidget
