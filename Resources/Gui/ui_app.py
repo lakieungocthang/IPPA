@@ -48,13 +48,29 @@ class Ui_MainWindow(object):
         self.toolBar_1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.toolBar_1.setObjectName("toolBar_1")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar_1)
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        exit_icon = QtGui.QIcon()
+        exit_icon.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/power.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
+        self.actionExit.setIcon(exit_icon)
+        self.actionExit.setText("Exit")
+        self.actionExit.setObjectName("actionExit")
+        self.toolBar_1.addAction(self.actionExit)
+        self.actionExit.triggered.connect(QtWidgets.qApp.quit)
         self.dockReportHeader = QtWidgets.QDockWidget(MainWindow)
         self.dockReportHeader.setMinimumSize(QtCore.QSize(200, 100))
         self.dockReportHeader.setFeatures(QtWidgets.QDockWidget.AllDockWidgetFeatures)
         self.dockReportHeader.setObjectName("dockReportHeader")
         self.dockReportHeaderWidgetContents = QtWidgets.QWidget()
-        self.dockReportHeaderWidgetContents.setObjectName("dockReportHeaderWidgetContents")
-        self.LayoutReportHeader = QtWidgets.QVBoxLayout(self.dockReportHeaderWidgetContents)
+        self.dockReportHeaderWidgetContents.setObjectName(
+            "dockReportHeaderWidgetContents"
+        )
+        self.LayoutReportHeader = QtWidgets.QVBoxLayout(
+            self.dockReportHeaderWidgetContents
+        )
         self.LayoutReportHeader.setObjectName("LayoutReportHeader")
         self.dockReportHeader.setWidget(self.dockReportHeaderWidgetContents)
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockReportHeader)
@@ -63,13 +79,19 @@ class Ui_MainWindow(object):
         self.dockReportHeader2.setFeatures(QtWidgets.QDockWidget.AllDockWidgetFeatures)
         self.dockReportHeader2.setObjectName("dockReportHeader2")
         self.dockReportHeader2WidgetContents = QtWidgets.QWidget()
-        self.dockReportHeader2WidgetContents.setObjectName("dockReportHeader2WidgetContents")
-        self.LayoutReportHeader2 = QtWidgets.QVBoxLayout(self.dockReportHeader2WidgetContents)
+        self.dockReportHeader2WidgetContents.setObjectName(
+            "dockReportHeader2WidgetContents"
+        )
+        self.LayoutReportHeader2 = QtWidgets.QVBoxLayout(
+            self.dockReportHeader2WidgetContents
+        )
         self.LayoutReportHeader2.setObjectName("LayoutReportHeader2")
         self.dockReportHeader2.setWidget(self.dockReportHeader2WidgetContents)
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockReportHeader2)
         self.dockHierarchyReport = QtWidgets.QDockWidget(MainWindow)
-        self.dockHierarchyReport.setFeatures(QtWidgets.QDockWidget.AllDockWidgetFeatures)
+        self.dockHierarchyReport.setFeatures(
+            QtWidgets.QDockWidget.AllDockWidgetFeatures
+        )
         self.dockHierarchyReport.setObjectName("dockHierarchyReport")
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setStyleSheet("")
@@ -182,7 +204,9 @@ class Ui_MainWindow(object):
         self.toolBar_4 = QtWidgets.QToolBar(MainWindow)
         self.toolBar_4.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.toolBar_4.setMovable(False)
-        self.toolBar_4.setAllowedAreas(QtCore.Qt.RightToolBarArea|QtCore.Qt.TopToolBarArea)
+        self.toolBar_4.setAllowedAreas(
+            QtCore.Qt.RightToolBarArea | QtCore.Qt.TopToolBarArea
+        )
         self.toolBar_4.setIconSize(QtCore.QSize(60, 60))
         self.toolBar_4.setFloatable(False)
         self.toolBar_4.setObjectName("toolBar_4")
@@ -213,71 +237,119 @@ class Ui_MainWindow(object):
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(2), self.dockReconstructor)
         self.actionOpen_Folder = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/folder.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/folder.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionOpen_Folder.setIcon(icon)
         self.actionOpen_Folder.setObjectName("actionOpen_Folder")
         self.actionReset = QtWidgets.QAction(MainWindow)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/refresh.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/refresh.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionReset.setIcon(icon1)
         self.actionReset.setObjectName("actionReset")
         self.actionClassify = QtWidgets.QAction(MainWindow)
         self.actionClassify.setCheckable(True)
         self.actionClassify.setChecked(False)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/layers.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/layers.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionClassify.setIcon(icon2)
         self.actionClassify.setObjectName("actionClassify")
         self.actionTransform = QtWidgets.QAction(MainWindow)
         self.actionTransform.setCheckable(True)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/contrast.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/contrast.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionTransform.setIcon(icon3)
         self.actionTransform.setObjectName("actionTransform")
         self.actionEdit = QtWidgets.QAction(MainWindow)
         self.actionEdit.setCheckable(True)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/edit.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/edit.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionEdit.setIcon(icon4)
         self.actionEdit.setObjectName("actionEdit")
         self.actionSave = QtWidgets.QAction(MainWindow)
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/save.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionSave.setIcon(icon5)
         self.actionSave.setObjectName("actionSave")
         self.actionExport = QtWidgets.QAction(MainWindow)
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/download.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/download.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionExport.setIcon(icon6)
         self.actionExport.setObjectName("actionExport")
         self.actionReport = QtWidgets.QAction(MainWindow)
         self.actionReport.setCheckable(True)
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/feed.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/feed.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionReport.setIcon(icon7)
         self.actionReport.setObjectName("actionReport")
         self.actionDetector = QtWidgets.QAction(MainWindow)
         self.actionDetector.setCheckable(True)
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/Icons/Resources/Icons/maximise.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/Icons/maximise.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionDetector.setIcon(icon8)
         self.actionDetector.setObjectName("actionDetector")
         self.actionTracking = QtWidgets.QAction(MainWindow)
         self.actionTracking.setCheckable(True)
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/Icons/Resources/NewIcons/Tracking.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/NewIcons/Tracking.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionTracking.setIcon(icon9)
         self.actionTracking.setObjectName("actionTracking")
         self.actionGenerate = QtWidgets.QAction(MainWindow)
         self.actionGenerate.setCheckable(True)
         icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap(":/Icons/Resources/NewIcons/Generative.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon10.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/NewIcons/Generative.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionGenerate.setIcon(icon10)
         self.actionGenerate.setObjectName("actionGenerate")
         self.actionReconstruct = QtWidgets.QAction(MainWindow)
         self.actionReconstruct.setCheckable(True)
         icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap(":/Icons/Resources/NewIcons/Reconstruction.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon11.addPixmap(
+            QtGui.QPixmap(":/Icons/Resources/NewIcons/Reconstruction.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.actionReconstruct.setIcon(icon11)
         self.actionReconstruct.setObjectName("actionReconstruct")
         self.toolBar_1.addAction(self.actionOpen_Folder)
@@ -301,7 +373,9 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.toolBar_1.setWindowTitle(_translate("MainWindow", "toolBar"))
-        self.dockReportHeader.setWindowTitle(_translate("MainWindow", "Select Hospital"))
+        self.dockReportHeader.setWindowTitle(
+            _translate("MainWindow", "Select Hospital")
+        )
         self.dockReportHeader2.setWindowTitle(_translate("MainWindow", "Sort By"))
         self.dockHierarchyReport.setWindowTitle(_translate("MainWindow", "Hierarchy"))
         self.dockHierarchy.setWindowTitle(_translate("MainWindow", "Hierarchy"))
@@ -340,4 +414,6 @@ class Ui_MainWindow(object):
         self.actionGenerate.setToolTip(_translate("MainWindow", "Generate"))
         self.actionReconstruct.setText(_translate("MainWindow", "Reconstruct"))
         self.actionReconstruct.setToolTip(_translate("MainWindow", "Reconstruct"))
+
+
 import resources_rc
